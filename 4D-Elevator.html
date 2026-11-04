@@ -158,9 +158,9 @@ button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
     <button data-lift="1" title="Lift B — bronze, rear mirror, LED strips, emperador floor"><i class="sw-b"></i><span>Lift B</span></button>
   </div>
   <div class="toggles glass" role="toolbar" aria-label="Display">
-    <button class="tg on" id="tLabels" title="Component labels (3D view)"><svg class="ic"><use href="#i-tag"/></svg><span class="lg2">Labels</span></button>
+    <button class="tg" id="tLabels" title="Component labels (3D view)"><svg class="ic"><use href="#i-tag"/></svg><span class="lg2">Labels</span></button>
     <button class="tg" id="tFloors" title="Show the floors above the cabin (3D view)"><svg class="ic"><use href="#i-layers"/></svg><span class="lg2">Floors</span></button>
-    <button class="tg on" id="tSection" title="Section cut through the shaft walls (3D view)"><svg class="ic"><use href="#i-cut"/></svg><span class="lg2">Section</span></button>
+    <button class="tg" id="tSection" title="Section cut through the shaft walls (3D view)"><svg class="ic"><use href="#i-cut"/></svg><span class="lg2">Section</span></button>
     <button class="tg" id="tCut" title="Remove the cabin side wall to look inside (3D view)"><svg class="ic"><use href="#i-open"/></svg><span class="lg2">Cutaway</span></button>
     <button class="tg on" id="tSound" title="Chime, motor hum and door sounds"><svg class="ic"><use href="#i-sound"/></svg><span class="lg2">Sound</span></button>
   </div>
@@ -1135,7 +1135,7 @@ function humStep(v){ const a=AC; if(!a) return;
    8. UI state, camera modes, input
    ===================================================================== */
 let lifts=[], sel=0, mode='orbit', clock=0;
-const ui={labels:true,floors:false,section:true,cut:false};
+const ui={labels:false,floors:false,section:false,cut:false};
 const orb={tx:0,ty:1.4,tz:-1,r:12.5,th:.62,ph:1.2,follow:true,oy:1.0};
 const P={x:0,z:4.6,yaw:0,pitch:-.04,floor:1,inCab:null,eye:1.62,bob:0};
 const keys={}; let tour=null;
