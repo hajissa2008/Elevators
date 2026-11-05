@@ -131,13 +131,14 @@ button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 @media (prefers-reduced-motion: reduce){ *{transition-duration:.01ms!important} button:active{transform:none} }
 /* ===================== Apple detailing polish ===================== */
 :root{ --r:18px; --r-s:12px;
-  --mat:rgba(252,251,249,.64); --mat-strong:rgba(252,251,249,.82); --mat-edge:rgba(255,255,255,.72);
-  --shadow:0 .5px 1px rgba(16,24,40,.05), 0 12px 32px -8px rgba(16,24,40,.17);
-  --shadow-lg:0 2px 8px rgba(16,24,40,.08), 0 30px 70px -14px rgba(16,24,40,.28); }
-body.dark{ --mat:rgba(26,28,32,.58); --mat-strong:rgba(26,28,32,.8); --mat-edge:rgba(255,255,255,.1); }
-.glass{ backdrop-filter:blur(30px) saturate(185%); -webkit-backdrop-filter:blur(30px) saturate(185%);
-  border:.5px solid var(--mat-edge); box-shadow:var(--shadow), inset 0 .5px 0 rgba(255,255,255,.55); }
-body.dark .glass{ box-shadow:var(--shadow), inset 0 .5px 0 rgba(255,255,255,.07); }
+  /* lighter, more transparent, gentler data cards */
+  --mat:rgba(253,252,250,.44); --mat-strong:rgba(253,252,250,.6); --mat-edge:rgba(255,255,255,.55);
+  --shadow:0 .5px 1px rgba(16,24,40,.04), 0 10px 30px -10px rgba(16,24,40,.12);
+  --shadow-lg:0 1px 4px rgba(16,24,40,.05), 0 24px 60px -18px rgba(16,24,40,.2); }
+body.dark{ --mat:rgba(24,26,30,.4); --mat-strong:rgba(24,26,30,.56); --mat-edge:rgba(255,255,255,.08); }
+.glass{ backdrop-filter:blur(34px) saturate(180%); -webkit-backdrop-filter:blur(34px) saturate(180%);
+  border:.5px solid var(--mat-edge); box-shadow:var(--shadow), inset 0 .5px 0 rgba(255,255,255,.4); }
+body.dark .glass{ box-shadow:var(--shadow), inset 0 .5px 0 rgba(255,255,255,.05); }
 button:active{ transform:scale(.975); }
 #bar{ gap:10px; top:max(12px,env(safe-area-inset-top)); left:12px; right:12px; }
 #brand{ padding:8px 16px 9px; border-radius:var(--r); }
